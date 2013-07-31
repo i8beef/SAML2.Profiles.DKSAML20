@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SAML2.Profiles.DKSAML20</id>
+    <version>1.0.0.0</version>
+    <title>SAML2.Profiles.DKSAML20</title>
+    <authors>Michael Hallock</authors>
+    <owners>Michael Hallock</owners>
+    <licenseUrl>https://saml2profilesdksaml20.codeplex.com/license</licenseUrl>
+    <projectUrl>https://saml2profilesdksaml20.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An extension to SAML2 that enables DK SAML 2.0 validations.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>SAML SSO DK</tags>
+  </metadata>
+  <files>
+    <file src="content\web.config.transform" target="content" />
+    <file src="..\src\SAML2.Profiles.DKSAML20\bin\Release\SAML2.Profiles.DKSAML20.dll" target="lib\net40" />
+  </files>
+  <dependencies>
+    <dependency id="SAML2" version="1.0.0.0" />
+  </dependencies>
+</package>

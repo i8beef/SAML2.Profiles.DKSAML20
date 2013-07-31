@@ -1,0 +1,5 @@
+<configuration>
+  <SAML20Federation>
+    <AssertionProfile assertionValidator="SAML2.Profiles.DKSAML20.Validation.DKSaml20AssertionValidator, SAML2.Profiles.DKSAML20" />
+  </SAML20Federation>
+</configuration>
