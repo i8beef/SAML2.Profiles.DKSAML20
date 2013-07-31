@@ -1,10 +1,11 @@
 using SAML2.Profiles.DKSAML20;
 using SAML2.Schema.Core;
 using SAML2.Utils;
+using SAML2.Validation;
 
 namespace SAML2.Profiles.DKSAML20.Validation
 {
-    internal class DKSAML20SubjectConfirmationValidator : ISaml20SubjectConfirmationValidator
+    public class DKSAML20SubjectConfirmationValidator : ISaml20SubjectConfirmationValidator
     {
         public void ValidateSubjectConfirmation(SubjectConfirmation subjectConfirmation)
         {

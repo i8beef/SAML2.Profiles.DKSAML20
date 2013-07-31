@@ -1,9 +1,10 @@
 using SAML2.Profiles.DKSAML20;
 using SAML2.Schema.Core;
+using SAML2.Validation;
 
 namespace SAML2.Profiles.DKSAML20.Validation
 {
-    internal class DKSAML20SubjectValidator : ISaml20SubjectValidator
+    public class DKSAML20SubjectValidator : ISaml20SubjectValidator
     {
         #region Properties
 

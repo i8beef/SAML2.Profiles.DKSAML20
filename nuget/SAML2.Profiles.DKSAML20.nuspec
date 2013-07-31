@@ -13,12 +13,12 @@
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>SAML SSO DK</tags>
+    <dependencies>
+      <dependency id="SAML2" version="1.0.0.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="content\web.config.transform" target="content" />
     <file src="..\src\SAML2.Profiles.DKSAML20\bin\Release\SAML2.Profiles.DKSAML20.dll" target="lib\net40" />
   </files>
-  <dependencies>
-    <dependency id="SAML2" version="1.0.0.0" />
-  </dependencies>
 </package>

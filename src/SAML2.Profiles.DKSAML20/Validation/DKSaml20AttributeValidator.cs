@@ -2,10 +2,11 @@ using System;
 using SAML2.Profiles.DKSAML20;
 using SAML2.Schema.Core;
 using SAML2.Schema.Protocol;
+using SAML2.Validation;
 
 namespace SAML2.Profiles.DKSAML20.Validation
 {
-    internal class DKSAML20AttributeValidator : ISaml20AttributeValidator
+    public class DKSAML20AttributeValidator : ISaml20AttributeValidator
     {
         public void ValidateAttribute(SamlAttribute samlAttribute)
         {            
