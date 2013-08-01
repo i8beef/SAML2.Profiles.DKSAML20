@@ -5,7 +5,7 @@ namespace SAML2.Profiles.DKSAML20.Attributes
     /// <summary>
     /// 
     /// </summary>
-    public class DKSAML20UniqueAccountKeyAttribute : DKSAML20Attribute
+    public class DKSaml20UniqueAccountKeyAttribute : DKSaml20Attribute
     {
         /// <summary>
         /// Attribute name

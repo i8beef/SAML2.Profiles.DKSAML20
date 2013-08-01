@@ -5,7 +5,7 @@ namespace SAML2.Profiles.DKSAML20.Attributes
     /// <summary>
     /// 
     /// </summary>
-    public class DKSAML20PostalAddressAttribute : DKSAML20Attribute
+    public class DKSaml20PostalAddressAttribute : DKSaml20Attribute
     {
         /// <summary>
         /// Attribute name

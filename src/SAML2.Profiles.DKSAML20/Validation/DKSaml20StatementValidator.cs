@@ -7,7 +7,7 @@ using SAML2.Validation;
 
 namespace SAML2.Profiles.DKSAML20.Validation
 {
-    public class DKSAML20StatementValidator : ISaml20StatementValidator
+    public class DKSaml20StatementValidator : ISaml20StatementValidator
     {
 
         #region Properties
@@ -19,7 +19,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
             get
             {
                 if (_attributeValidator == null)
-                    _attributeValidator = new DKSAML20AttributeValidator();
+                    _attributeValidator = new DKSaml20AttributeValidator();
                 return _attributeValidator;
             }
         }
@@ -48,7 +48,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
                 return;
             }
 
-            throw new DKSAML20FormatException(
+            throw new DKSaml20FormatException(
                 string.Format("The DK-SAML 2.0 profile does not allow unknown Statement type: \"{0}\"", statement.GetType()));
         }
 
@@ -58,14 +58,14 @@ namespace SAML2.Profiles.DKSAML20.Validation
 
         private void ValidateAuthzDecisionStatement()
         {
-            throw new DKSAML20FormatException(
+            throw new DKSaml20FormatException(
                 "The DK-SAML 2.0 profile does not allow the \"AuthzDecisionStatement\" element.");
         }
 
         private void ValidateAuthnStatement(AuthnStatement authnStatement)
         {
             if (!Saml20Utils.ValidateRequiredString(authnStatement.SessionIndex))
-                throw new DKSAML20FormatException(
+                throw new DKSaml20FormatException(
                     "The DK-SAML 2.0 profile requires that the \"AuthnStatement\" element contains the \"SessionIndex\" attribute.");
         }
 
@@ -74,7 +74,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
             foreach (object attribute in attributeStatement.Items)
             {
                 if (attribute is EncryptedElement)
-                    throw new DKSAML20FormatException("The DK-SAML 2.0 profile does not allow encrypted attributes.");
+                    throw new DKSaml20FormatException("The DK-SAML 2.0 profile does not allow encrypted attributes.");
 
                 if (!(attribute is SamlAttribute))
                     throw new NotImplementedException(string.Format("Unable to handle attribute of type \"{0}\"", attribute.GetType().FullName));

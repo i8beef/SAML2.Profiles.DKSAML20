@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SAML2.Profiles.DKSAML20</id>
-    <version>1.0.0.0</version>
+    <version>1.0.0.5</version>
     <title>SAML2.Profiles.DKSAML20</title>
     <authors>Michael Hallock</authors>
     <owners>Michael Hallock</owners>
@@ -10,15 +10,15 @@
     <projectUrl>https://saml2profilesdksaml20.codeplex.com/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>An extension to SAML2 that enables DK SAML 2.0 validations.</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Fixed minimum SAML2 reference to 1.0.0.5.</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>SAML SSO DK</tags>
     <dependencies>
-      <dependency id="SAML2" version="1.0.0.3" />
+      <dependency id="SAML2" version="1.0.0.5" />
     </dependencies>
   </metadata>
   <files>
     <file src="content\web.config.transform" target="content" />
-    <file src="..\src\SAML2.Profiles.DKSAML20\bin\Release\SAML2.Profiles.DKSAML20.dll" target="lib\net40" />
+    <file src="..\src\SAML2.Profiles.DKSAML20\bin\Release\SAML2.Profiles.DKSAML20.dll" target="lib\net35" />
   </files>
 </package>

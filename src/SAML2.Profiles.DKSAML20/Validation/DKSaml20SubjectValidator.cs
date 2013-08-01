@@ -4,7 +4,7 @@ using SAML2.Validation;
 
 namespace SAML2.Profiles.DKSAML20.Validation
 {
-    public class DKSAML20SubjectValidator : ISaml20SubjectValidator
+    public class DKSaml20SubjectValidator : ISaml20SubjectValidator
     {
         #region Properties
 
@@ -15,7 +15,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
             get
             {
                 if (_subjectConfirmationValidator == null)
-                    _subjectConfirmationValidator = new DKSAML20SubjectConfirmationValidator();
+                    _subjectConfirmationValidator = new DKSaml20SubjectConfirmationValidator();
                 return _subjectConfirmationValidator;
             }
         }
@@ -25,7 +25,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
         public void ValidateSubject(Subject subject)
         {
             if (subject.Items == null || subject.Items.Length == 0)
-                throw new DKSAML20FormatException("The DK-SAML 2.0 Profile requires at least one \"SubjectConfirmation\" element within the \"Subject\" element.");
+                throw new DKSaml20FormatException("The DK-SAML 2.0 Profile requires at least one \"SubjectConfirmation\" element within the \"Subject\" element.");
 
             bool subjectConfirmationPresent = false;
             foreach (object item in subject.Items)
@@ -40,7 +40,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
                 }
             }
             if (!subjectConfirmationPresent)
-                throw new DKSAML20FormatException("The DK-SAML 2.0 Profile requires that a bearer \"SubjectConfirmation\" element is present.");
+                throw new DKSaml20FormatException("The DK-SAML 2.0 Profile requires that a bearer \"SubjectConfirmation\" element is present.");
         }
     }
 }

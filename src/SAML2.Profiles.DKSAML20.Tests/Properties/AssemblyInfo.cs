@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SAML2.Profiles.DKSAML20")]
+[assembly: AssemblyTitle("SAML2.Profiles.DKSAML20.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SAML2.Profiles.DKSAML20")]
+[assembly: AssemblyProduct("SAML2.Profiles.DKSAML20.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("70bb191f-08a6-4263-a2c6-730865b4fcfa")]
+[assembly: Guid("37b79e6c-c8a6-4a3d-ae36-78a3af9a7a20")]
 
 // Version information for an assembly consists of the following four values:
 //

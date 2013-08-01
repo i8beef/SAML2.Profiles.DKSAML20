@@ -5,10 +5,10 @@ using SAML2.Validation;
 
 namespace SAML2.Profiles.DKSAML20.Validation
 {
-    public class DKSAML20AssertionValidator : Saml20AssertionValidator
+    public class DKSaml20AssertionValidator : Saml20AssertionValidator
     {
         
-        public DKSAML20AssertionValidator(List<string> allowedAudienceUris, bool quirksMode)
+        public DKSaml20AssertionValidator(List<string> allowedAudienceUris, bool quirksMode)
             : base(allowedAudienceUris, quirksMode)
         {}
 
@@ -21,7 +21,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
             get
             {
                 if (_subjectValidator == null)
-                    _subjectValidator = new DKSAML20SubjectValidator();
+                    _subjectValidator = new DKSaml20SubjectValidator();
                 return _subjectValidator;
             }
         }
@@ -33,7 +33,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
             get
             {
                 if (_statementValidator == null)
-                    _statementValidator = new DKSAML20StatementValidator();
+                    _statementValidator = new DKSaml20StatementValidator();
                 return _statementValidator;
             }
         }
@@ -68,13 +68,13 @@ namespace SAML2.Profiles.DKSAML20.Validation
                     audienceRestrictionPresent = true;
                     AudienceRestriction audienceRestriction = (AudienceRestriction)condition;
                     if (audienceRestriction.Audience == null || audienceRestriction.Audience.Count == 0)
-                        throw new DKSAML20FormatException(
+                        throw new DKSaml20FormatException(
                             "The DK-SAML 2.0 profile requires that an \"AudienceRestriction\" element contains the service provider's unique identifier in an \"Audience\" element.");
                 }
             }
 
             if (!audienceRestrictionPresent)
-                throw new DKSAML20FormatException("The DK-SAML 2.0 profile requires that an \"AudienceRestriction\" element is present on the saml20Assertion.");
+                throw new DKSaml20FormatException("The DK-SAML 2.0 profile requires that an \"AudienceRestriction\" element is present on the saml20Assertion.");
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
         private void ValidateSubject(Assertion assertion)
         {
             if (assertion.Subject == null)
-                throw new DKSAML20FormatException("The DK-SAML 2.0 profile requires that a \"Subject\" element is present in the saml20Assertion.");
+                throw new DKSaml20FormatException("The DK-SAML 2.0 profile requires that a \"Subject\" element is present in the saml20Assertion.");
 
             SubjectValidator.ValidateSubject(assertion.Subject);
         }
@@ -97,7 +97,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
 
             // Check that the number of statements is correct.
             if (assertion.Items.Length != 2)
-                throw new DKSAML20FormatException("The DK-SAML 2.0 profile requires exactly one \"AuthnStatement\" element and one \"AttributeStatement\" element.");
+                throw new DKSaml20FormatException("The DK-SAML 2.0 profile requires exactly one \"AuthnStatement\" element and one \"AttributeStatement\" element.");
 
             // Check if it is the correct statements.            
             bool authnStatementPresent = false;
@@ -114,7 +114,7 @@ namespace SAML2.Profiles.DKSAML20.Validation
             }
 
             if (!(authnStatementPresent && attributeStatementPresent))
-                throw new DKSAML20FormatException("The DK-SAML 2.0 profile requires exactly one \"AuthnStatement\" element and one \"AttributeStatement\" element.");            
+                throw new DKSaml20FormatException("The DK-SAML 2.0 profile requires exactly one \"AuthnStatement\" element and one \"AttributeStatement\" element.");            
         }
 
         /// <summary>
@@ -123,18 +123,18 @@ namespace SAML2.Profiles.DKSAML20.Validation
         private void ValidateIssuerElement(Assertion assertion)
         {
             if (assertion.Issuer == null)
-                throw new DKSAML20FormatException("Assertion MUST contain an issuer in the DK-SAML 2.0 profile.");
+                throw new DKSaml20FormatException("Assertion MUST contain an issuer in the DK-SAML 2.0 profile.");
             
             // KBP 01-09-2008: Removed validation of attributes on Issuer element due to future changes DK-SAML profile.
         }
 
         /// <summary>
-        /// Throws a DKSAML20FormationException containing an error message saying that an Issuer-element cannot have 
+        /// Throws a DKSaml20FormationException containing an error message saying that an Issuer-element cannot have 
         /// attributes in the DK-SAML 2.0 profile.
         /// </summary>
         private static void ThrowIssuerNotEntity()
         {
-            throw new DKSAML20FormatException(
+            throw new DKSaml20FormatException(
                 "The DK-SAML 2.0 Profile does not allow the \"Issuer\" element to have any attributes."); 
         }
 

@@ -1,0 +1,3 @@
+This file describes the assertions that are stored in this directory.
+
+Saml2Assertion_01 - Assertion is signed with the certificate that is embedded.

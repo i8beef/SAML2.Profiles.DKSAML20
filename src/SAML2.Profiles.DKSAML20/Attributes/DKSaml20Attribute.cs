@@ -5,7 +5,7 @@ namespace SAML2.Profiles.DKSAML20.Attributes
     /// <summary>
     /// The base class for all DK Saml 2.0 attributes.
     /// </summary>
-    public abstract class DKSAML20Attribute 
+    public abstract class DKSaml20Attribute 
     {
         /// <summary>
         /// Creates a SamlAttribute with the specified name.

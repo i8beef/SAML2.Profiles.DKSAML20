@@ -5,16 +5,15 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CA3071BB-65E3-45D6-84EE-B20FA33BCA91}</ProjectGuid>
+    <ProjectGuid>{F4250D5F-C141-4F5F-85D3-DAEF5157399F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SAML2.Profiles.DKSAML20</RootNamespace>
-    <AssemblyName>SAML2.Profiles.DKSAML20</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <RootNamespace>SAML2.Profiles.DKSAML20.Tests</RootNamespace>
+    <AssemblyName>SAML2.Profiles.DKSAML20.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,47 +33,43 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="SAML2, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SAML2.1.0.0.5\lib\net35\SAML2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\DKSaml20AssuranceLevelAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20Attribute.cs" />
-    <Compile Include="Attributes\DKSaml20CommonNameAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20CprNumberAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20CvrNumberAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20EmailAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20OCESPseudonymAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20OrganizationNameAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20OrganizationUnitAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20PidNumberAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20PostalAddressAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20RidNumberAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20SerialNumberCertificateAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20SpecVerAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20SurnameAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20TitleAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20UidAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20UniqueAccountKeyAttribute.cs" />
-    <Compile Include="Attributes\DKSaml20UserCertificateAttribute.cs" />
-    <Compile Include="DKSaml20FormatException.cs" />
+    <Compile Include="AssertionUtil.cs" />
+    <Compile Include="DKSaml20ProfileValidationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validation\DKSaml20AssertionValidator.cs" />
-    <Compile Include="Validation\DKSaml20AttributeValidator.cs" />
-    <Compile Include="Validation\DKSaml20StatementValidator.cs" />
-    <Compile Include="Validation\DKSaml20SubjectConfirmationValidator.cs" />
-    <Compile Include="Validation\DKSaml20SubjectValidator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Assertions\Saml2Assertion_01">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SAML2.Profiles.DKSAML20\SAML2.Profiles.DKSAML20.csproj">
+      <Project>{CA3071BB-65E3-45D6-84EE-B20FA33BCA91}</Project>
+      <Name>SAML2.Profiles.DKSAML20</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assertions\Assertions.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

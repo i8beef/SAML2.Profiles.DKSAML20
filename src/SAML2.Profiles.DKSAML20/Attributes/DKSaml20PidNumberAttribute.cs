@@ -5,7 +5,7 @@ namespace SAML2.Profiles.DKSAML20.Attributes
     /// <summary>
     /// 
     /// </summary>
-    public class DKSAML20PidNumberAttribute : DKSAML20Attribute
+    public class DKSaml20PidNumberAttribute : DKSaml20Attribute
     {
         /// <summary>
         /// Attribute name

@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B6AD9E
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAML2.Profiles.DKSAML20.Tests", "SAML2.Profiles.DKSAML20.Tests\SAML2.Profiles.DKSAML20.Tests.csproj", "{F4250D5F-C141-4F5F-85D3-DAEF5157399F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{CA3071BB-65E3-45D6-84EE-B20FA33BCA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA3071BB-65E3-45D6-84EE-B20FA33BCA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA3071BB-65E3-45D6-84EE-B20FA33BCA91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4250D5F-C141-4F5F-85D3-DAEF5157399F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4250D5F-C141-4F5F-85D3-DAEF5157399F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4250D5F-C141-4F5F-85D3-DAEF5157399F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4250D5F-C141-4F5F-85D3-DAEF5157399F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
