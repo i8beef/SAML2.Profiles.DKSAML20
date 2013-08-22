@@ -10,11 +10,11 @@
     <projectUrl>https://saml2profilesdksaml20.codeplex.com/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>An extension to SAML2 that enables DK SAML 2.0 validations.</description>
-    <releaseNotes>Fixed minimum SAML2 reference to 1.0.0.5.</releaseNotes>
+    <releaseNotes>Updated for SAML 2.2.4.0 and reorganized all unit tests.</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>SAML SSO DK</tags>
     <dependencies>
-      <dependency id="SAML2" version="1.0.0.5" />
+      <dependency id="SAML2" version="2.2.4.0" />
     </dependencies>
   </metadata>
   <files>

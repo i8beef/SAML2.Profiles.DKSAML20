@@ -3,23 +3,23 @@ using SAML2.Schema.Core;
 namespace SAML2.Profiles.DKSAML20.Attributes
 {
     /// <summary>
-    /// 
+    /// DK SAML Profile UniqueAccountKey attribute.
     /// </summary>
     public class DKSaml20UniqueAccountKeyAttribute : DKSaml20Attribute
     {
         /// <summary>
         /// Attribute name
         /// </summary>
-        public const string NAME = "dk:gov:saml:attribute:UniqueAccountKey";
+        public const string Name = "dk:gov:saml:attribute:UniqueAccountKey";
 
         /// <summary>
         /// Creates an attribute with the specified value.
         /// </summary>
         /// <param name="value">The value.</param>
-        /// <returns></returns>
+        /// <returns>The <see cref="SamlAttribute"/>.</returns>
         public static SamlAttribute Create(string value)
         {
-            return Create(NAME, null, value);
+            return Create(Name, null, value);
         }
     }
 }
