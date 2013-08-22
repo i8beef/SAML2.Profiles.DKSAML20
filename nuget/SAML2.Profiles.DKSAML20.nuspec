@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SAML2.Profiles.DKSAML20</id>
-    <version>1.0.0.5</version>
+    <version>2.2.4.0</version>
     <title>SAML2.Profiles.DKSAML20</title>
     <authors>Michael Hallock</authors>
     <owners>Michael Hallock</owners>
