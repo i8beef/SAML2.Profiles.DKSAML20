@@ -97,8 +97,8 @@ namespace SAML2.Profiles.DKSAML20.Tests
         {
             var assertion = new Assertion
                                 {
-                                    Issuer = new NameID(),
-                                    ID = "_b8977dc86cda41493fba68b32ae9291d",
+                                    Issuer = new NameId(),
+                                    Id = "_b8977dc86cda41493fba68b32ae9291d",
                                     IssueInstant = DateTime.UtcNow,
                                     Version = "2.0"
                                 };
