@@ -58,7 +58,7 @@ namespace SAML2.Profiles.DKSAML20.Tests.Validation
                 var quirksModeValidator = new DKSaml20AssertionValidator(AssertionUtil.GetAudiences(), true);
 
                 var saml20Assertion = AssertionUtil.GetBasicAssertion();
-                saml20Assertion.Issuer = new NameID { Value = "http://safewhere.net", Format = "http://example.com" };
+                saml20Assertion.Issuer = new NameId { Value = "http://safewhere.net", Format = "http://example.com" };
 
                 // Act
                 quirksModeValidator.ValidateAssertion(saml20Assertion);
