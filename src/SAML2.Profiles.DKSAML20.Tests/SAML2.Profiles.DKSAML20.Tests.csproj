@@ -37,7 +37,7 @@
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="SAML2">
-      <HintPath>..\packages\SAML2.2.3.0.0\lib\net35\SAML2.dll</HintPath>
+      <HintPath>..\packages\SAML2.2.3.1.0\lib\net35\SAML2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -64,7 +64,9 @@
     <None Include="Assertions\Saml2Assertion_01">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SAML2.Profiles.DKSAML20\SAML2.Profiles.DKSAML20.csproj">
