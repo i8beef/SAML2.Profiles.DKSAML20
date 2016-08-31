@@ -1,8 +1,5 @@
 # SAML2.Profiles.DKSAML20
 
-[![Build status](https://ci.appveyor.com/api/projects/status/prw1j26kc1kvbl4c/branch/master?svg=true)](https://ci.appveyor.com/project/i8beef/saml2.profiles.dksaml20/branch/release)
-[![Build status](https://ci.appveyor.com/api/projects/status/prw1j26kc1kvbl4c/branch/master?svg=true)](https://ci.appveyor.com/project/i8beef/saml2.profiles.dksaml20/branch/master)
-
 Extension profile for SAML2 which provides OASIS SAML 2.0 validation for the DK specification.
 
 ### Where to get it
